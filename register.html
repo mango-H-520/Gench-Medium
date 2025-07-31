@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注册</title>
+  <link rel="stylesheet" href="auth-style.css">
+</head>
+<body class="register-page">
+  <div class="auth-container">
+    <!-- 顶部图片 -->
+    <img src="top-register.jpg" alt="注册页面顶部图片" class="top-image">
+    
+    <h2>用户注册</h2>
+    <form id="registerForm" class="auth-form">
+      <div class="form-group">
+        <label for="regUsername">用户名</label>
+        <input type="text" id="regUsername" required>
+      </div>
+      <div class="form-group">
+        <label for="regPassword">密码</label>
+        <input type="password" id="regPassword" required>
+      </div>
+      <button type="submit">注册</button>
+      <div class="message" id="regMessage"></div>
+    </form>
+    <p>已有账号？<a href="login.html">去登录</a></p>
+  </div>
+
+  <script>
+    // 获取后端API地址（跨设备访问时替换为电脑局域网IP）
+    const API_BASE_URL = 'http://0.0.0.0:5000'; // 或 'http://你的局域网IP:5000'
+
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('regUsername').value;
+      const password = document.getElementById('regPassword').value;
+
+      fetch(`${API_BASE_URL}/api/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      })
+      .then(res => res.json())
+      .then(data => {
+        const messageElement = document.getElementById('regMessage');
+        messageElement.textContent = data.message;
+        messageElement.style.color = data.success ? 'green' : 'red';
+
+        if (data.success) {
+          alert('注册成功！');
+          document.getElementById('registerForm').reset();
+        }
+      })
+      .catch(error => {
+        console.error('请求失败:', error);
+        document.getElementById('regMessage').textContent = '网络错误，请检查设备是否在同一网络';
+        document.getElementById('regMessage').style.color = 'red';
+      });
+    });
+  </script>
+</body>
+</html>

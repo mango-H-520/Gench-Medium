@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="department.css">
+    <link rel="stylesheet" href="gallery.css">
+    <title>摄影作品展示 - 摄影部</title>
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="top-nav">
+        <div class="container">
+        <a href="index.html" style="text-decoration: none;">
+            <div class="logo-area">
+                <img src="logo.png" alt="校团委媒体中心Logo" class="logo">
+                <div class="title-group">
+                    <h1 class="main-title">校团委媒体中心</h1>
+                    <p class="sub-title">Gench Medium</p>
+                </div>
+            </div>
+        </a>
+
+            <button class="menu-toggle" aria-label="打开菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-right">
+                <nav class="main-nav">
+                    <a href="index.html#structure" class="structure-link">部门构成</a>
+                    <a href="photography.html">摄影部</a>
+                    <span class="current-dept">/ 摄影作品</span>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="login.html" class="auth-btn">登录</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 页面横幅 -->
+    <section class="dept-banner">
+        <div class="banner-overlay"></div>
+        <img src="photo/photography-banner.jpg" alt="摄影部作品展示" class="banner-img">
+        <div class="banner-text">
+            <h2>摄影作品展示</h2>
+            <p>定格光影瞬间，留存美好记忆</p>
+        </div>
+    </section>
+
+    <!-- 作品展示区 -->
+    <main class="content">
+        <section class="section">
+            <div class="container">
+                <h3>精选作品</h3>
+                
+                <!-- 作品过滤标签 -->
+                <div class="filter-tags">
+                    <button class="tag-btn active" data-filter="all">全部作品</button>
+                    <button class="tag-btn" data-filter="activity">活动记录</button>
+                    <button class="tag-btn" data-filter="scenery">校园风光</button>
+                    <button class="tag-btn" data-filter="portrait">人物肖像</button>
+                    <button class="tag-btn" data-filter="time">快门时刻</button>
+                </div>
+                
+                <!-- 作品网格 -->
+                <div class="gallery-grid">
+                    <!-- 作品1 -->
+                    <div class="gallery-item" data-category="activity">
+                        <div class="gallery-img-container">
+                            <img src="photo/work1.jpg" alt="校园艺术节活动记录" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>校园艺术节活动记录</h4>
+                            <p class="author">作者: 秦怡</p>
+                            <p class="date">2024-10-09</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 作品2 -->
+                    <div class="gallery-item" data-category="scenery">
+                        <div class="gallery-img-container">
+                            <img src="photo/work2.jpg" alt="春枝绽妍" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>春枝绽妍</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2024-03-28</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 作品3 -->
+                    <div class="gallery-item" data-category="portrait">
+                        <div class="gallery-img-container">
+                            <img src="photo/work3.jpg" alt="发梢与缄默" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>发梢与缄默</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2025-07-13</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 作品4 -->
+                    <div class="gallery-item" data-category="activity">
+                        <div class="gallery-img-container">
+                            <img src="photo/work4.jpg" alt="校园文创" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>校园文创</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2024-11-04</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 作品5 -->
+                    <div class="gallery-item" data-category="scenery">
+                        <div class="gallery-img-container">
+                            <img src="photo/work5.jpg" alt="《水湄棱影》" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>水湄棱影</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2024-01-21</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 作品6 -->
+                    <div class="gallery-item" data-category="scenery">
+                        <div class="gallery-img-container">
+                            <img src="photo/work6.jpg" alt="时代精神坐标" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>时代精神坐标</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2024-01-21</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品7 -->
+                    <div class="gallery-item" data-category="scenery">
+                        <div class="gallery-img-container">
+                            <img src="photo/work7.jpg" alt="层叠轩廊" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>层叠轩廊</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2024-06-21</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品8 -->
+                    <div class="gallery-item" data-category="activity">
+                        <div class="gallery-img-container">
+                            <img src="photo/work8.jpg" alt="军训方阵" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>军训方阵</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2025-05-15</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品8 -->
+                    <div class="gallery-item" data-category="activity">
+                        <div class="gallery-img-container">
+                            <img src="photo/work9.jpg" alt="标杆" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>标杆</h4>
+                            <p class="author">作者: 秦怡</p>
+                            <p class="date">2025-05-15</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品10 -->
+                    <div class="gallery-item" data-category="activity">
+                        <div class="gallery-img-container">
+                            <img src="photo/work10.jpg" alt="微笑脸庞，共探实验" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>微笑脸庞，共探实验</h4>
+                            <p class="author">作者: 秦怡</p>
+                            <p class="date">2025-04-02</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品11 -->
+                    <div class="gallery-item" data-category="activity">
+                        <div class="gallery-img-container">
+                            <img src="photo/work11.jpg" alt="红裳展臂，情启一梦" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>红裳展臂，情启一梦</h4>
+                            <p class="author">作者: 秦怡</p>
+                            <p class="date">2024-10-09</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品12 -->
+                    <div class="gallery-item" data-category="activity">
+                        <div class="gallery-img-container">
+                            <img src="photo/work12.jpg" alt="以 “夏至，等你至” 盼归人" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>以 “夏至，等你至” 盼归人</h4>
+                            <p class="author">作者: 秦怡</p>
+                            <p class="date">2025-06-21</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品13 -->
+                    <div class="gallery-item" data-category="activity">
+                        <div class="gallery-img-container">
+                            <img src="photo/work13.jpg" alt="校园文创" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>校园文创</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2024-11-04</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品14 -->
+                    <div class="gallery-item" data-category="activity">
+                        <div class="gallery-img-container">
+                            <img src="photo/work14.jpg" alt="骑行先锋" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>骑行先锋</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2025-05-11</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品15 -->
+                    <div class="gallery-item" data-category="time">
+                        <div class="gallery-img-container">
+                            <img src="photo/work15.jpg" alt="跑者的双面时光" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>跑者的双面时光</h4>
+                            <p class="author">作者: 吴佳浩</p>
+                            <p class="date">2025-07-23</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品16 -->
+                    <div class="gallery-item" data-category="time">
+                        <div class="gallery-img-container">
+                            <img src="photo/work16.jpg" alt="落日吻别人间" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>落日吻别人间</h4>
+                            <p class="author">作者: 吴佳浩</p>
+                            <p class="date">2025-07-24</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品17 -->
+                    <div class="gallery-item" data-category="time">
+                        <div class="gallery-img-container">
+                            <img src="photo/work17.jpg" alt="街头“瑜伽大师”" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>街头“瑜伽大师”</h4>
+                            <p class="author">作者: 吴佳浩</p>
+                            <p class="date">2025-03-01</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品18 -->
+                    <div class="gallery-item" data-category="time">
+                        <div class="gallery-img-container">
+                            <img src="photo/work18.jpg" alt="街头那只戴粉花的柴" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>街头那只戴粉花的柴</h4>
+                            <p class="author">作者: 吴佳浩</p>
+                            <p class="date">2025-03-01</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 作品19 -->
+                    <div class="gallery-item" data-category="portrait">
+                        <div class="gallery-img-container">
+                            <img src="photo/work19.jpg" alt="透明伞与白裙子" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>透明伞与白裙子</h4>
+                            <p class="author">作者: 秦怡</p>
+                            <p class="date">2025-06-03</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品20 -->
+                    <div class="gallery-item" data-category="portrait">
+                        <div class="gallery-img-container">
+                            <img src="photo/work20.jpg" alt="琴音伞影共夏长" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>琴音伞影共夏长</h4>
+                            <p class="author">作者: 秦怡</p>
+                            <p class="date">2025-06-03</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品21 -->
+                    <div class="gallery-item" data-category="portrait">
+                        <div class="gallery-img-container">
+                            <img src="photo/work21.jpg" alt="兄弟，好久不见" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>兄弟，好久不见</h4>
+                            <p class="author">作者: 秦怡</p>
+                            <p class="date">2025-06-21</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品22 -->
+                    <div class="gallery-item" data-category="time">
+                        <div class="gallery-img-container">
+                            <img src="photo/work22.jpg" alt="穹秩" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>穹秩</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2025-02-28</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品23 -->
+                    <div class="gallery-item" data-category="time">
+                        <div class="gallery-img-container">
+                            <img src="photo/work23.jpg" alt="城市水晶" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>城市水晶</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2025-01-21</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品24 -->
+                    <div class="gallery-item" data-category="time">
+                        <div class="gallery-img-container">
+                            <img src="photo/work24.jpg" alt="海滨垂钓" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>海滨垂钓</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2025-05-16</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品25 -->
+                    <div class="gallery-item" data-category="time">
+                        <div class="gallery-img-container">
+                            <img src="photo/work25.jpg" alt="石隙纵横" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>石隙纵横</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2025-05-16</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品26 -->
+                    <div class="gallery-item" data-category="time">
+                        <div class="gallery-img-container">
+                            <img src="photo/work26.jpg" alt="滴水湖畔" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>滴水湖畔</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2025-03-02</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品27 -->
+                    <div class="gallery-item" data-category="time">
+                        <div class="gallery-img-container">
+                            <img src="photo/work27.jpg" alt="街边小店" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>街边小店</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2025-03-02</p>
+                        </div>
+                    </div>
+
+                    <!-- 作品28 -->
+                    <div class="gallery-item" data-category="time">
+                        <div class="gallery-img-container">
+                            <img src="photo/work28.jpg" alt="兴慈运悲" class="gallery-img">
+                            <div class="img-overlay">
+                                <span class="view-details">查看详情</span>
+                            </div>
+                        </div>
+                        <div class="gallery-info">
+                            <h4>兴慈运悲</h4>
+                            <p class="author">作者: 黄浩嵩</p>
+                            <p class="date">2024-01-24</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 图片放大查看模态框 -->
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="modal-img" src="" alt="大图预览">
+            <div class="modal-details">
+                <h3 id="modal-title"></h3>
+                <p id="modal-author"></p>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部版权 -->
+    <footer class="bottom-footer">
+        <div class="container">
+            <p>© 共青团上海建桥学院委员会 校团委媒体中心</p>
+            <p>联系我们：tw@gench.edu.cn | 咨询电话：021-58137895</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>

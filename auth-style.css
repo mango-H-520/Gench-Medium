@@ -1,0 +1,145 @@
+/* 通用样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 背景图自适应设置 */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  padding: 20px; /* 小屏幕留出边距 */
+}
+
+/* 登录/注册页面背景图区分 */
+.login-page {
+  background-image: url('login-bg.jpg');
+}
+
+.register-page {
+  background-image: url('register-bg.jpg');
+}
+
+/* 响应式表单容器 - 透明效果 */
+.auth-container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 90%; /* 小屏幕占满宽度 */
+  max-width: 400px; /* 大屏幕限制最大宽度 */
+  padding: 25px;
+  color: #fff;
+}
+
+/* 顶部图片样式 */
+.top-image {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 标题样式 */
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+/* 表单样式 */
+.auth-form .form-group {
+  margin-bottom: 20px;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* 响应式输入框 - 手机上更易点击 */
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px; /* 手机上文字更清晰 */
+  transition: border 0.3s;
+}
+
+.auth-form input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* 响应式按钮 */
+.auth-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: rgba(76, 175, 80, 0.8);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-form button:hover {
+  background-color: rgba(76, 175, 80, 1);
+}
+
+/* 消息提示 */
+.message {
+  margin-top: 15px;
+  text-align: center;
+  height: 22px;
+  font-size: 14px;
+}
+
+/* 链接样式 */
+.auth-container p {
+  text-align: center;
+  margin-top: 20px;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.auth-container a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+/* 横竖屏适配 */
+@media (orientation: landscape) {
+  .auth-container {
+    margin: 30px auto;
+  }
+}
+
+/* 大屏适配 */
+@media (min-width: 768px) {
+  .auth-container {
+    padding: 35px;
+  }
+  
+  .auth-container h2 {
+    font-size: 28px;
+  }
+}

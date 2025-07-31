@@ -1,0 +1,245 @@
+/* 导航整体样式 */
+.main-nav {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333; /* 文字基础颜色 */
+}
+
+/* 部门构成链接样式 */
+.structure-link {
+    color: #c3000b; /* 链接文字颜色，可根据需求调整 */
+    text-decoration: none; /* 去除默认下划线 */
+    position: relative;
+    margin-right: 8px; /* 与后面分隔符的间距 */
+}
+
+/* 部门构成链接 hover 效果（可选，增强交互感） */
+.structure-link:hover {
+    color: #a80009; /*  hover 时的颜色变化 */
+}
+
+/* 部门构成链接下划线动画（可选，点击感更明显） */
+.structure-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #c3000b;
+    transform: scaleX(0); /* 初始隐藏下划线 */
+    transition: transform 0.3s ease;
+}
+
+.structure-link:hover::after {
+    transform: scaleX(1); /* hover 时显示下划线 */
+}
+
+/* 文案部当前页样式 */
+.current-dept {
+    color: #333; /* 当前页文字颜色，可按需调整 */
+    font-weight: bold; /* 加粗突出显示 */
+}
+/* 部门页面特有样式 */
+.dept-banner {
+    position: relative;
+    margin-top: 80px;
+}
+
+.dept-banner .banner-text h2 {
+    font-size: 80px;
+}
+
+.dept-banner .banner-text p {
+    font-size: 24px;
+}
+
+/* 部门内容样式 */
+.dept-content {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.dept-responsibilities {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.dept-responsibilities li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 10px;
+}
+
+.dept-responsibilities li::before {
+    content: '•';
+    color: #c3000b;
+    position: absolute;
+    left: -15px;
+}
+
+/* 作品展示样式 */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.work-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.work-item h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.work-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 图片展示样式 */
+.gallery, .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.gallery-item, .photo-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover, .photo-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img, .photo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-item p, .photo-item p {
+    padding: 15px;
+    text-align: center;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* 审核流程样式 */
+.process-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+    position: relative;
+}
+
+.process-flow::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    right: 50px;
+    height: 2px;
+    background-color: #c3000b;
+    z-index: 1;
+}
+
+.process-step {
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+    z-index: 2;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background-color: #c3000b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+.step-content {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.step-content h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* 招新要求样式 */
+.requirements {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #666;
+}
+
+.requirements ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.requirements li {
+    margin-bottom: 10px;
+}
+
+.requirements .join-btn {
+    margin-top: 20px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .dept-banner .banner-text h2 {
+        font-size: 48px;
+    }
+    
+    .dept-banner .banner-text p {
+        font-size: 18px;
+    }
+    
+    .process-flow {
+        flex-direction: column;
+    }
+    
+    .process-flow::before {
+        width: 2px;
+        height: calc(100% - 120px);
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+    }
+}
